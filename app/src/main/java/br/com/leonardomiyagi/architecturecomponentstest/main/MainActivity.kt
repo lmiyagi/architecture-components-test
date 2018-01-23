@@ -1,7 +1,8 @@
-package br.com.leonardomiyagi.architecturecomponentstest
+package br.com.leonardomiyagi.architecturecomponentstest.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import br.com.leonardomiyagi.architecturecomponentstest.R
 
 class MainActivity : AppCompatActivity() {
 
