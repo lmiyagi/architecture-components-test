@@ -1,4 +1,4 @@
-package br.com.leonardomiyagi.architecturecomponentstest.di
+package br.com.leonardomiyagi.architecturecomponentstest.presentation.di
 
 import br.com.leonardomiyagi.architecturecomponentstest.BaseApplication
 import dagger.Component

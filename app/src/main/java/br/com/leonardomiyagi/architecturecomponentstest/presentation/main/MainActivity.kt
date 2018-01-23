@@ -1,9 +1,9 @@
-package br.com.leonardomiyagi.architecturecomponentstest.main
+package br.com.leonardomiyagi.architecturecomponentstest.presentation.main
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import br.com.leonardomiyagi.architecturecomponentstest.R
-import br.com.leonardomiyagi.architecturecomponentstest.base.BaseActivity
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.base.BaseActivity
 import br.com.leonardomiyagi.architecturecomponentstest.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity() {

@@ -1,4 +1,4 @@
-package br.com.leonardomiyagi.architecturecomponentstest.base
+package br.com.leonardomiyagi.architecturecomponentstest.presentation.base
 
 import android.os.Bundle
 import android.os.PersistableBundle

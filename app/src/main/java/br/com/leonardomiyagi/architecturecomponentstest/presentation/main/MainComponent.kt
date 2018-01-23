@@ -1,5 +1,7 @@
-package br.com.leonardomiyagi.architecturecomponentstest.main
+package br.com.leonardomiyagi.architecturecomponentstest.presentation.main
 
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.di.ActivityScoped
+import dagger.Binds
 import dagger.Module
 import dagger.Subcomponent
 import dagger.android.AndroidInjector
@@ -14,5 +16,7 @@ interface MainComponent : AndroidInjector<MainActivity> {
     abstract class Builder : AndroidInjector.Builder<MainActivity>()
 
     @Module
-    abstract class MainModule {}
+    abstract class MainModule {
+        // todo main module
+    }
 }

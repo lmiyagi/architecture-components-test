@@ -1,6 +1,6 @@
 package br.com.leonardomiyagi.architecturecomponentstest
 
-import br.com.leonardomiyagi.architecturecomponentstest.di.DaggerAppComponent
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.support.DaggerApplication
 

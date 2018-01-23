@@ -1,8 +1,8 @@
-package br.com.leonardomiyagi.architecturecomponentstest.di
+package br.com.leonardomiyagi.architecturecomponentstest.presentation.di
 
 import android.app.Activity
-import br.com.leonardomiyagi.architecturecomponentstest.main.MainActivity
-import br.com.leonardomiyagi.architecturecomponentstest.main.MainComponent
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.main.MainActivity
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.main.MainComponent
 import dagger.Binds
 import dagger.Module
 import dagger.android.ActivityKey
