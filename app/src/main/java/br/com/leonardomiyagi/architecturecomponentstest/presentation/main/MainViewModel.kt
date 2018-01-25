@@ -6,6 +6,9 @@ import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import br.com.leonardomiyagi.architecturecomponentstest.data.model.User
 import br.com.leonardomiyagi.architecturecomponentstest.domain.user.GetUsers
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import javax.inject.Inject
 
 /**
@@ -24,7 +27,15 @@ class MainViewModel(private val getUsers: GetUsers) : ViewModel() {
     }
 
     fun getUsers() {
-        usersLiveData.value = getUsers.execute()
+        getUsers.execute(object : Callback<List<User>> {
+            override fun onFailure(call: Call<List<User>>?, t: Throwable?) {
+                usersLiveData.value = null
+            }
+
+            override fun onResponse(call: Call<List<User>>?, response: Response<List<User>>?) {
+                usersLiveData.value = response?.body()
+            }
+        })
     }
 
     class MainViewModelFactory @Inject constructor(private val getUsers: GetUsers) : ViewModelProvider.Factory {

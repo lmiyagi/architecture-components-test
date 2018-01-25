@@ -1,6 +1,7 @@
 package br.com.leonardomiyagi.architecturecomponentstest.presentation.di
 
 import android.content.Context
+import br.com.leonardomiyagi.architecturecomponentstest.data.api.ApiClient
 import br.com.leonardomiyagi.architecturecomponentstest.data.repository.DefaultUserRepository
 import br.com.leonardomiyagi.architecturecomponentstest.domain.repository.UserRepository
 import dagger.Module
@@ -24,7 +25,7 @@ class AppModule(private val context: Context) {
 
     @Provides
     @Singleton
-    fun provideUserRepository(): UserRepository {
-        return DefaultUserRepository()
+    fun provideUserRepository(apiClient: ApiClient): UserRepository {
+        return DefaultUserRepository(apiClient)
     }
 }
