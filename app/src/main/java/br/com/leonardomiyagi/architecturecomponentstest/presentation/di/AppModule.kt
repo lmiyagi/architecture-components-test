@@ -4,6 +4,7 @@ import br.com.leonardomiyagi.architecturecomponentstest.data.repository.DefaultU
 import br.com.leonardomiyagi.architecturecomponentstest.domain.repository.UserRepository
 import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import javax.inject.Singleton
 
 /**
@@ -11,9 +12,11 @@ import javax.inject.Singleton
  */
 @Singleton
 @Module
-abstract class AppModule {
+class AppModule {
 
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindUserRepository(repository: DefaultUserRepository): UserRepository
+    fun provideUserRepository(): UserRepository {
+        return DefaultUserRepository()
+    }
 }
