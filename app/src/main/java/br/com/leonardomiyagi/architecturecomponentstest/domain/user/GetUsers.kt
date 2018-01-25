@@ -9,7 +9,7 @@ import retrofit2.Callback
  */
 class GetUsers(private val userRepository: UserRepository) {
 
-    fun execute(callback: Callback<List<User>>) {
+    fun execute(callback: Callback<List<User>>):  {
         return userRepository.getUsers(callback)
     }
 }

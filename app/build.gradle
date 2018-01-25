@@ -55,6 +55,9 @@ dependencies {
     implementation "android.arch.persistence.room:runtime:$architecture_components_version"
     kapt "android.arch.persistence.room:compiler:$architecture_components_version"
 
+    // Paging
+    implementation "android.arch.paging:runtime:1.0.0-alpha5"
+
     // Test helpers for LiveData
     testImplementation "android.arch.core:core-testing:$architecture_components_version"
 

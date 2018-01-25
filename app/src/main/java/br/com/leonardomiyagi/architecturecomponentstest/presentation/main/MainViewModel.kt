@@ -4,6 +4,7 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
+import android.arch.paging.LivePagedListBuilder
 import br.com.leonardomiyagi.architecturecomponentstest.data.model.User
 import br.com.leonardomiyagi.architecturecomponentstest.domain.user.GetUsers
 import retrofit2.Call
@@ -33,7 +34,8 @@ class MainViewModel(private val getUsers: GetUsers) : ViewModel() {
             }
 
             override fun onResponse(call: Call<List<User>>?, response: Response<List<User>>?) {
-                usersLiveData.value = response?.body()
+                // todo add datasource.factory
+                usersLiveData.value = LivePagedListBuilder<>(response?.body(), 10).build
             }
         })
     }

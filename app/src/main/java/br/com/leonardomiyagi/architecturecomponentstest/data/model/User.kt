@@ -9,7 +9,7 @@ class User {
 
     @SerializedName("id")
     var id: Int? = null
-    @SerializedName("name")
+    @SerializedName("login")
     var name: String? = null
     @SerializedName("html_url")
     var url: String? = null
