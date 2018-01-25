@@ -2,6 +2,7 @@ package br.com.leonardomiyagi.architecturecomponentstest.presentation.di
 
 import br.com.leonardomiyagi.architecturecomponentstest.BaseApplication
 import dagger.Component
+import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import javax.inject.Singleton
@@ -11,6 +12,7 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(modules = arrayOf(
+        AndroidInjectionModule::class,
         AndroidSupportInjectionModule::class,
         AppModule::class,
         BindingModule::class))

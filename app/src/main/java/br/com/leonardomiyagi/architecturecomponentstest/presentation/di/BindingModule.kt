@@ -14,7 +14,6 @@ import javax.inject.Singleton
 /**
  * Created by lmiyagi on 23/01/18.
  */
-@Singleton
 @Module(subcomponents = arrayOf(MainComponent::class))
 abstract class BindingModule {
 
@@ -22,11 +21,4 @@ abstract class BindingModule {
     @IntoMap
     @ActivityKey(MainActivity::class)
     abstract fun bindMainActivity(builder: MainComponent.Builder): AndroidInjector.Factory<out Activity>
-
-    @Module
-    companion object {
-        @JvmStatic
-        @Provides
-        fun provideMainComponentBuilder() = MainComponent.Builder()
-    }
 }
