@@ -3,7 +3,7 @@ package br.com.leonardomiyagi.architecturecomponentstest.data.repository
 import br.com.leonardomiyagi.architecturecomponentstest.data.api.ApiClient
 import br.com.leonardomiyagi.architecturecomponentstest.data.model.User
 import br.com.leonardomiyagi.architecturecomponentstest.domain.repository.UserRepository
-import retrofit2.Callback
+import br.com.leonardomiyagi.architecturecomponentstest.presentation.util.RetrofitLiveData
 
 
 /**
@@ -11,7 +11,7 @@ import retrofit2.Callback
  */
 class DefaultUserRepository(private val apiClient: ApiClient) : UserRepository {
 
-    override fun getUsers(callback: Callback<List<User>>) {
-        return apiClient.getUsers().enqueue(callback)
+    override fun getUsers(): RetrofitLiveData<List<User>> {
+        return RetrofitLiveData(apiClient.getUsers())
     }
 }
