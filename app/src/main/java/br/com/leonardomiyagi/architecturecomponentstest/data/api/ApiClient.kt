@@ -8,7 +8,7 @@ import retrofit2.Call
  */
 class ApiClient(private val apiService: ApiService) {
 
-    fun getUsers(): Call<List<User>> {
-        return apiService.getUsers()
+    fun getUsers(since: Int): Call<List<User>> {
+        return apiService.getUsers(since)
     }
 }
